@@ -12,7 +12,7 @@ import com.aneviaro.service.dto.CityDTO;
 
 import java.util.Optional;
 
-@Controller
+@RestController
 @RequestMapping("/api")
 public class CityResource {
 

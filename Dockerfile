@@ -16,4 +16,4 @@ RUN chmod +x Bot-0.0.1.jar
 
 EXPOSE $PORT
 
-CMD ["/usr/bin/java","-jar", "Bot-0.0.1.jar"]
+CMD ["/usr/bin/java","-jar", "Bot-0.0.1.jar", "-Dspring.profiles.active=docker"]
