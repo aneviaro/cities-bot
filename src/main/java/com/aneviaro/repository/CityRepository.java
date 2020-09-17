@@ -2,6 +2,7 @@ package com.aneviaro.repository;
 
 import com.aneviaro.domain.City;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
@@ -14,4 +15,8 @@ public interface CityRepository extends JpaRepository<City, Long> {
 
     @Query("select description from City c where c.name = :name")
     Optional<String> getDescriptionByName(@Param("name") String name);
+
+    @Modifying
+    @Query("delete from City c where c.name=:name")
+    void deleteByName(@Param("name") String name);
 }

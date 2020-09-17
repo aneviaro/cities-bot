@@ -1,7 +1,7 @@
 # cities-bot
 Telegram bot using Java Spring Boot.
 
-#Bot usage
+# Bot usage
 
 [Link to telegram bot](t.me/cities_admin_bot)
 
@@ -11,7 +11,7 @@ After a `/start` command you'd see a message:
 
 *Greeting, please type in City Name: I.e: Minsk*
 
-#Running with Docker
+# Running with Docker
 
 To run this project inside Docker container you'd need to have Docker installed on your machine and run the following commands:
 
@@ -23,7 +23,7 @@ To run this project inside Docker container you'd need to have Docker installed 
 
 >`docker run --network=bot -p 127.0.0.1:8080:8080/tcp app`
 
-#Running locally
+# Running locally
 
 To run this project locally you'd need to have MySQL along with Java and Maven installed. Hibernate will automatically create and fulfill the database with needed information. You'd need to specify 
 1. `spring.datasource.url`
