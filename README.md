@@ -15,13 +15,7 @@ After a `/start` command you'd see a message:
 
 To run this project inside Docker container you'd need to have Docker installed on your machine and run the following commands:
 
->`docker network create bot`
-
->`docker build -t app .`
-
->`docker run --network=bot --name bot-mysql -p 3307:3306 -e MYSQL_ROOT_PASSWORD=rootadmin -d mysql:5.7`
-
->`docker run --network=bot -p 127.0.0.1:8080:8080/tcp app`
+>`docker-compose up`
 
 # Running locally
 
@@ -36,3 +30,24 @@ values in the **src/main/resources/application-local.properties** file. Those va
 
 >`java -jar -Dspring.profiles.active=local target/Bot-0.0.1.jar `  
 
+# API 
+
+We support these urls to use via REST request:
+
+> POST: localhost:8080/api/city
+
+  
+>     "name":"New York",
+>     "description": "Description"
+
+
+> PUT: localhost:8080/api/city
+
+
+>     "id":"5",
+>     "name":"New York",
+>     "description": "Description"
+
+> DELETE: localhost:8080/api/city/{name}
+
+> GET: localhost:8080/api/city/{name}
