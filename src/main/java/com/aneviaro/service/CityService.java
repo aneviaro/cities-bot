@@ -31,6 +31,11 @@ public class CityService {
         return cityMapper.toDto(city);
     }
 
+    public void delete(String name){
+        cityRepository.deleteByName(name);
+    }
+
+
     @Transactional(readOnly = true)
     public List<CityDTO> findAll(){
         return cityRepository.findAll().stream()
